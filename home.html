@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header class="container mx-auto pt-5 items-center flex justify-between">
+      <div class="logo">
+        <a href="">Logo</a>
+      </div>
+          <div class=" border py-2 px-3 rounded-lg cursor-pointer">
+            <a href="./index.html" class="flex items-center justify-center space-x-2">
+                <img src="./images/logout-icon.png" alt="icon" class="w-6">
+                <span >Log Out</span>
+            </a>
+          </div>
+    </header>
+    <hr class="my-4">
+    <main class="container mx-auto">
+
+      <section class="py-8 flex items-center justify-center">
+        <div class="stats shadow">
+          <div class="stat text-center">
+              <div class="stat-value" id="balance">89400</div>
+            <div class="stat-title text-sm">Available balance</div>
+          </div>
+        </div>
+      </section>
+
+        <section class="flex items-center justify-center gap-5">
+              <button id="show-add-money-btn" class="btn btn-success">Add Money</button>
+              <button id="show-cash-out-btn" class="btn btn-error">Cash Out</button>
+        </section>
+
+        <!-- Add money section start here  -->
+        <section id="add-money-form" class="hidden my-14">
+<div class="flex items-center justify-center">
+  <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+    <form class="card-body">
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">Add Money</span>
+        </label>
+        <input id="phone-number" type="text" placeholder="Enter your amount" class="input input-bordered" required />
+      </div>
+      <div class="form-control">
+        <label class="label">
+          <span class="label-text">4 Digit Pin</span>
+        </label>
+        <input id="pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+      </div>
+      <div class="form-control mt-6">
+        <button id="btn" class="btn btn-primary">Add Balance</button>
+      </div>
+    </form>
+  </div>
+</div>
+        </section>
+        <!-- Add money section end here  -->
+
+        <!-- cash out section start here  -->
+        <section id="cash-out-form"  class="hidden my-14">
+          <div class="flex items-center justify-center">
+            <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Cash out</span>
+                  </label>
+                  <input id="cash-out" type="text" placeholder="Enter your amount" class="input input-bordered" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">4 Digit Pin</span>
+                  </label>
+                  <input id="cash-out-pin-number" type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cash-out-btn" class="btn btn-primary">Cash Out Balance</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <!-- cash out section end here  -->
+    </main>
+
+    <script src="./js/home.js"></script>
+</body>
+</html>
